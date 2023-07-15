@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Digital Clock</title>
+</head>
+<script>
+
+function start()
+{
+//varibles with time factors
+var datetime=new Date()
+var hours=datetime.getHours()
+var minutes=datetime.getMinutes()
+var seconds=datetime.getSeconds()
+
+//getting session html element
+
+var ses=document.getElementById("session")
+
+//changing am pm
+if(hours>=12)
+{
+ses.innerHTML="PM"
+}
+else
+{
+ses.innerHTML="AM"
+}
+if(hours>12)
+{
+hours=hours-12
+}
+//getting htmls
+document.getElementById("hours").innerHTML=hours
+document.getElementById("minutes").innerHTML=minutes
+document.getElementById("seconds").innerHTML=seconds
+}
+setInterval(start,100)
+</script>
+<style>
+body
+{
+background-color:rgb(124,236,226);
+}
+div
+{
+text-align:center;
+align:center;
+font-family:tahoma;
+font-weight:bold;
+font-size:50;
+border:5px dotted green;
+padding:20px 20px 20px 20px;
+margin:20px 20px 20px 20px;
+margin-top:50px;
+color:#black;
+background-color:cyan;
+}
+h1
+{
+text-align:center;
+align:center;
+font-family:tahoma;
+font-weight:bold;
+font-size:50;
+margin:20px 20px 20px 20px;
+color:darkblue;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1><u>Digital Clock</u></h1>
+<br>
+<div class="container">
+	<span id="hours">00</span>
+	<span>:</span>
+	<span id="minutes">00</span>
+	<span>:</span>
+	<span id="seconds">00</span>
+	<span id="session">AM</span>
+
+</div>
+
+</body>
+
+</html>
+	

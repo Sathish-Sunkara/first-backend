@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>hex colour picker</title>
+
+<script>
+var redvalue=0
+var greenvalue=0
+var bluevalue=0
+function gencolors()
+{
+redvalue=document.getElementById("red").value
+
+greenvalue=document.getElementById("green").value
+
+bluevalue=document.getElementById("blue").value
+
+document.getElementById("r").innerHTML=redvalue
+document.getElementById("g").innerHTML=greenvalue
+document.getElementById("b").innerHTML=bluevalue
+
+//var z=document.getElementById("body")
+//z.style.color="rgb("+redvalue+","+greenvalue+","+bluevalue+")"
+document.body.style.backgroundColor="rgb("+redvalue+","+greenvalue+","+bluevalue+")";
+document.getElementById("code").innerHTML="RGB("+redvalue+","+greenvalue+","+bluevalue+")"
+}
+</script>
+
+
+<style>
+div{
+text-align:center;
+background-color:rgb(41,0,102);
+color:cyan;
+align:center;
+height:330;
+width:400;
+
+border:10px dotted white;
+border-radius:125px;
+transform:translate(100%,0%);
+position:absolute;
+justify-content:center;
+display:grid;
+}
+</style>
+
+
+</head>
+<body id="body">
+<h1 style="text-align:center;color:red;"><u>HEX COLOUR PICKER</u></h1>
+<br>
+<br>
+
+
+
+<div>
+<form>
+
+R<input  id="red" oninput="gencolors()" type=range min=0 max=255 step=1 name="" value="0"><h2 id="r">0</h2>
+
+
+G<input id="green" oninput="gencolors()" type=range min=0 max=255 step=1 name="" value="0"><h2 id="g">0</h2>
+
+
+B<input id="blue" oninput="gencolors()" type=range min=0 max=255 step=1 name="" value="0"><h2 id="b">0</h2>
+
+<span>
+<h1 id="code" >RGB(0,0,0)</h1>
+</span>
+
+</form>
+</div>
+
+</body>
+
+</html>

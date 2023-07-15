@@ -1,0 +1,153 @@
+<html>
+
+<head>
+
+<title>
+SIMPLE CALCULATOR
+</title>
+
+<script>
+function del()
+{
+var s=document.getElementById("input").value
+    s=s.slice(0,-1)
+	document.getElementById("input").value=s
+}
+function ac()
+{
+    document.getElementById("input").value=""
+}
+
+function but(input)
+{
+    document.getElementById("input").value+=input
+
+}
+
+function cal()
+{
+var string=document.getElementById("input").value
+var output=eval(document.getElementById("input").value)
+if(output!==string)
+{
+document.getElementById("input").value=output
+}
+else if(output===undefined)
+{
+document.getElementById("input").value="Syntax Error !!!"
+}
+
+}
+
+</script>
+
+<style>
+button
+{
+background-color:#100056;
+color:cyan;
+padding: 10px 40px;
+font-size:40;
+
+}
+
+td
+{
+background-color:#1a70a6;
+}
+input
+{
+font-size:50;
+}
+
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div>
+
+<table border=5>
+<caption style="font-size:30;background-color:#bb1670;color:yellow">SIMPLE CALCULATOR</caption>
+
+
+
+<tr>
+<td colspan="4"><input id="input" type=text required name="" value=""></td>
+</tr>
+
+<tr>
+<td class="bt"><button onclick="but('1')">1</button></td>
+<td><button class="bt" onclick="but('2')">2</button></td>
+<td><button class="bt" onclick="but('3')">3</button></td>
+<td><button class="bt" onclick="but('+')">+</button></td>
+</tr>
+
+<tr>
+<td><button class="bt" onclick="but('4')">4</button></td>
+<td><button class="bt" onclick="but('5')">5</button></td>
+<td><button class="bt" onclick="but('6')">6 </button></td>
+<td><button class="bt" onclick="but('-')">-</button></td>
+</tr>
+
+<tr>
+<td><button class="bt" onclick="but('7')">7</button></td>
+<td><button class="bt" onclick="but('8')">8</button></td>
+<td><button class="bt" onclick="but('9')">9 </button></td>
+<td><button class="bt" onclick="but('*')">*</button></td>
+</tr>
+
+<tr>
+<td><button class="bt" onclick="but('0')">0</button></td>
+<td><button class="bt" onclick="but('/')">/</button></td>
+<td><button class="bt" onclick="but('%')">%</button></td>
+<td><button class="bt" onclick="but('**')">^</button></td>
+</tr>
+
+
+<tr>
+<td><button class="bt" onclick="but('.')">.</button></td>
+<td><button class="bt" onclick="but('(')">(</button></td>
+<td><button class="bt" onclick="but(')')">)</button></td>
+<td><button class="bt" onclick="cal()">=</button></td>
+</tr>
+
+<tr>
+<td colspan=2><button onclick="ac()">CLEAR</button></td>
+<td colspan=2><button class="bt" onclick="del()">DELETE</button</td>
+</tr>
+
+
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
